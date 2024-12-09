@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "905452996013",
+    "project_id": "telehealth-b9a5a",
+    "storage_bucket": "telehealth-b9a5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905452996013:android:a053fba9c3054272c68d24",
+        "android_client_info": {
+          "package_name": "com.example.telehelth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZ3DYCdV3ya8Gn7rbCHBYvGWRuODJhbns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

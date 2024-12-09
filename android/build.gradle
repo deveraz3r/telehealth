@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+buildscript {
+    ext{
+        buildToolsVersion = '33.0.0'
+        minSdkVersion = 19
+        kotlin_version = '1.7.10'
+        compileSdk= 33
+        targetSdkVersion = 33
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+     classpath 'com.google.gms:google-services:4.3.10'
+//        classpath "com.google.gms.google-services:4.4.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+
+
